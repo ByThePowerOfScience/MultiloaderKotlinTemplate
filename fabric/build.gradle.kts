@@ -29,6 +29,9 @@ loom {
         defaultRefmapName.set("${rootProject.prop("mod_id")}.refmap.json")
     }
     runs {
+        configureEach {
+            vmArgs.addAll(listOf("-Dmixin.debug.export=true", "-Dmixin.debug.verbose=true", "-XX:+AllowEnhancedClassRedefinition"))
+        }
         maybeCreate("client").apply {
             client()
 	        configName = "Fabric Client"

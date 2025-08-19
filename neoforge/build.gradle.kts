@@ -22,6 +22,7 @@ neoForge {
         configureEach {
             systemProperty("neoforge.enabledGameTestNamespaces", prop("mod_id"))
             ideName = "NeoForge ${name.capitalize()} (${project.path})" // Unify the run config names with fabric
+            jvmArguments.addAll(listOf("-Dmixin.debug.export=true", "-Dmixin.debug.verbose=true", "-XX:+AllowEnhancedClassRedefinition"))
         }
         create("client") {
             client()

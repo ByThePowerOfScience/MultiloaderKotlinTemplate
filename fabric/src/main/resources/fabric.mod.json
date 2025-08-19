@@ -18,7 +18,13 @@
         "main": [
             {
                 "adapter": "kotlin",
-                "value": "btpos.mcmods.devutil.fabric.FabricEntry"
+                "value": "btpos.mcmods.examplemod.fabric.FabricEntry"
+            }
+        ],
+        "client": [
+            {
+                "adapter": "kotlin",
+                "value": "btpos.mcmods.examplemod.fabric.client.FabricClientEntry"
             }
         ]
     },
