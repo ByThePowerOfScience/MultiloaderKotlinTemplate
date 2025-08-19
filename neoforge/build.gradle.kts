@@ -7,6 +7,11 @@ fun Project.prop(name: String): String {
     return rootProject.property(name) as String
 }
 
+@Suppress("NOTHING_TO_INLINE")
+inline fun String.capitalize() { // why on earth would KT deprecate this? this is like basic standardlib stuff.
+    this.replaceFirstChar { it.uppercase() }
+}
+
 neoForge {
     version = prop("neoforge_version")
     // Automatically enable neoforge AccessTransformers if the file exists
