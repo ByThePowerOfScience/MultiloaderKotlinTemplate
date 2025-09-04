@@ -1,7 +1,6 @@
-
 plugins {
-    id("groovy-gradle-plugin")
     `kotlin-dsl`
+    kotlin("jvm") version libs.versions.kotlin
 }
 
 repositories {
@@ -10,11 +9,18 @@ repositories {
     gradlePluginPortal()
 }
 
+fun pluginDep(id: String, version: String): String {
+    return "$id:$id.gradle.plugin:$version"
+}
+
 dependencies {
-    implementation("org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:${libs.versions.kotlin.get()}")
-    implementation("btpos.gradle.architecturyextended.base:btpos.gradle.architecturyextended.base.gradle.plugin:1.0.0-SNAPSHOT")
-    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
-    // val libs = the<LibrariesForLibs>()
     implementation(libs.kotlin.reflect.get())
-    implementation("btpos.gradle.multiloader.platformtransformers:btpos.gradle.multiloader.platformtransformers.gradle.plugin:1.0-SNAPSHOT")
+    
+    implementation(pluginDep("org.jetbrains.kotlin.jvm", libs.versions.kotlin.get()))
+    
+    implementation(pluginDep("btpos.gradle.mcmods.multiplatform.base", "1.0-SNAPSHOT"))
+    implementation(pluginDep("btpos.gradle.mcmods.multiplatform.postprocessing", "1.0-SNAPSHOT"))
+    implementation(pluginDep("btpos.plugins.kt.varinterfacedelegation", "0.1.0-SNAPSHOT"))
+    
+    implementation(pluginDep("com.github.gmazzo.buildconfig", "6.0.9"))
 }

@@ -1,11 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "btpos.mcmods.devutil.mixin",
+  "package": "btpos.mcmods.cutscenelib.mixin",
   "compatibilityLevel": "JAVA_21",
-  "plugin": "btpos.mcmods.devutil.MixinConfigPlugin",
   "mixins": [
-  
   ],
   "client": [
   ],

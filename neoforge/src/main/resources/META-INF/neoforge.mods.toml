@@ -31,12 +31,12 @@ config = "${mod_id}.mixins.json"
     versionRange = "${minecraft_version_range}"
     ordering = "NONE"
     side = "BOTH"
-#[[dependencies.${mod_id}]]
-#    modId = "btpos_devutil"
-#    type="required"
-#    versionRange = "[1,)"
-#    ordering = "AFTER"
-#    side = "BOTH"
+[[dependencies.${mod_id}]]
+    modId = "btpos_devutil"
+    type="required"
+    versionRange = "${devutil_version}"
+    ordering = "AFTER"
+    side = "BOTH"
 
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares

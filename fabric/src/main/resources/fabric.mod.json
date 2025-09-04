@@ -8,8 +8,8 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "${link_homepage}",
+        "sources": "${link_sources}"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
@@ -18,13 +18,13 @@
         "main": [
             {
                 "adapter": "kotlin",
-                "value": "btpos.mcmods.examplemod.fabric.FabricEntry"
+                "value": "${group}.fabric.CutsceneLibFabric"
             }
         ],
         "client": [
             {
                 "adapter": "kotlin",
-                "value": "btpos.mcmods.examplemod.fabric.client.FabricClientEntry"
+                "value": "${group}.fabric.client.CutsceneLibFabricClient"
             }
         ]
     },

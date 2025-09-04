@@ -1,6 +1,20 @@
 [versions]
-    kotlin = "2.1.21"
-    ksp = "2.1.21-2.0.2"
+    kotlin = "2.2.21"
+    fabric-kotlin = "1.13.7+kotlin.2.2.21"
+    
+    devutil = "1.0-SNAPSHOT"
+
+
+[plugins]
+    devutil = { id = "btpos.mcmods.devutil.transformer", version.ref = "devutil" }
+
 
 [libraries]
     kotlin-reflect = { group="org.jetbrains.kotlin", name="kotlin-reflect", version.ref="kotlin" }
+
+    devutil-common = { module="btpos.mcmods.devutil:btpos_devutil-common-1.21.8", version.ref="devutil" }
+    devutil-neoforge = { module="btpos.mcmods.devutil:btpos_devutil-neoforge-1.21.8", version.ref="devutil" }
+    devutil-fabric = { module="btpos.mcmods.devutil:btpos_devutil-fabric-1.21.8", version.ref="devutil" }
+    devutil-testutil = { module="btpos.mcmods.devutil:btpos_devutil-test-utils-1.21.8", version.ref="devutil" }
+
+    fabric-kotlin = { module="net.fabricmc:fabric-language-kotlin", version.ref="fabric-kotlin" }
