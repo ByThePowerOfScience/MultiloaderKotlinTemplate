@@ -1,6 +1,7 @@
 plugins {
     id("multiloader-common")
     id("btpos.gradle.mcmods.multiplatform.postprocessing")
+    id("ismodjar-convention")
     idea
 }
 

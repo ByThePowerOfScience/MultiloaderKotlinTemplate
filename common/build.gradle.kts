@@ -3,6 +3,7 @@ import btpos.gradle.mcmods.multiplatform.base.attributes.MCPlatform
 plugins {
     id("multiloader-common")
     id("net.neoforged.moddev")
+    id("ismodjar-convention")
 }
 
 btposMultiplatform {
